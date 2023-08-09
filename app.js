@@ -127,6 +127,8 @@ app.get('/scoreboard/:id', (req,res) => {
 
 app.post('/scoreboard', (req,res) => {
     const newScore = req.body;
+    console.log(newScore,"!!!")
+    // newScore["name"] = req.w
     newScore["id"] = scoreboard.length + 1;
     scoreboard.push(newScore);
     res.send(newScore); 
